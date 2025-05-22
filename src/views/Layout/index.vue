@@ -1,10 +1,15 @@
 <template>
-  <h1>我是首页</h1>
-  <router-view/>
+  <LayoutNav />
+  <LayoutHeader />
+  <LayoutFooter />
+  <router-view />
+
 </template>
 
 <script setup>
-
+  import LayoutHeader from './components/LayoutHeader.vue'
+  import LayoutFooter from './components/LayoutFooter.vue'
+  import LayoutNav from './components/LayoutNav.vue'
 </script>
 
 <style></style>

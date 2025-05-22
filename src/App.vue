@@ -3,12 +3,13 @@
 </script>
 
 <template>
+ 
   <router-view />
-
-  <!-- 测试scss自动导入 -->
+  
+  <!-- 测试scss自动导入
    <div class="test">
     test scss
-   </div>
+   </div> -->
 </template>
 
 <style scoped lang="scss">
