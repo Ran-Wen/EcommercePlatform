@@ -1,15 +1,8 @@
 <script setup>
-   import {getCategoryAPI} from '@/apis/layout'
-import { onMounted, ref } from 'vue'
-const categoryList=ref([])
-   const category=async()=>{
-      const res=await getCategoryAPI()
-      categoryList.value=res.result
-    }
-
-    onMounted(()=>{
-      category()
-    })
+   import { useCategoryStore } from '@/stores/categoryStore'
+   import HeaderCart from './HeaderCart.vue';
+   const categoryStore = useCategoryStore()
+   
 </script>
 
 <template>
@@ -19,8 +12,8 @@ const categoryList=ref([])
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
       <ul class="app-header-nav">
-        <li class="home" v-for="item in categoryList" :key="item.id">
-          <RouterLink to="/">{{item.name}}</RouterLink>
+        <li class="home"  v-for="item in categoryStore.categoryList" :key="item.id">
+          <RouterLink active-class="active" :to="`/category/${item.id}`">{{item.name}}</RouterLink>
         </li>
       </ul>
       <div class="search">
@@ -28,7 +21,7 @@ const categoryList=ref([])
         <input type="text" placeholder="搜一搜">
       </div>
       <!-- 头部购物车 -->
-
+      <HeaderCart/>
     </div>
   </header>
 </template>
