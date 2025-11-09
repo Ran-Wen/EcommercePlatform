@@ -7,6 +7,7 @@
   <!-- second分支测试 -->
   <router-view />
   <!-- thirdww分支 -->
+  <!-- other -->
   <!-- 测试scss自动导入
    <div class="test">
     test scss
