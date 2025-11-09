@@ -3,9 +3,9 @@
 </script>
 
 <template>
- 
+  <!--新分支测试 -->
   <router-view />
-  
+
   <!-- 测试scss自动导入
    <div class="test">
     test scss
@@ -13,9 +13,10 @@
 </template>
 
 <style scoped lang="scss">
-.test{
+.test {
   color: $helpColor;
 }
+
 header {
   line-height: 1.5;
   max-height: 100vh;
